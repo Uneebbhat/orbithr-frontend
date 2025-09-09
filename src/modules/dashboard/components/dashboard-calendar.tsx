@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 
-export default async function CalendarPage() {
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
+import React, { useState } from "react";
+
+export default async function DashboardCalendar() {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
     <Calendar
       mode="single"

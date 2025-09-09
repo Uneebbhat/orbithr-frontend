@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 const request: any[] = [
   {
@@ -35,13 +36,19 @@ const request: any[] = [
   },
 ];
 
-export default function LeaveRequestCards() {
+export default async function LeaveRequestCards() {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
   return (
     <>
       <ScrollArea className="h-[350px] md:h-auto border p-4 rounded-xl overflow-auto">
-        <h2 className="text-xl font-bold mb-2">Leave Requests</h2>
+        <div className="flex items-center justify-between mb-4 px-4">
+          <h2 className="text-xl font-bold mb-2">Leave Requests</h2>
+          <Button variant={"ghost"} asChild>
+            <Link href={"/leaves"}>View all</Link>
+          </Button>
+        </div>
         {request.length > 0 ? (
-          request.map((req) => (
+          request.slice(0, 2).map((req) => (
             <div key={req.id}>
               <Card>
                 <CardContent className="space-y-4">
