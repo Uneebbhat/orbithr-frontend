@@ -28,11 +28,11 @@ export function NavMain({
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
-              tooltip="Quick Create"
+              tooltip="Add Employee"
               className="bg-primary text-white hover:bg-primary/90 hover:text-white active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear cursor-pointer"
             >
               <CirclePlus />
-              <span>Quick Create</span>
+              <span>Add Employee</span>
             </SidebarMenuButton>
             {/* <Button
               size="icon"

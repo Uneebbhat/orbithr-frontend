@@ -1,6 +1,10 @@
 import { Loader2 } from "lucide-react";
 
-export default function LoadingAnalyticsCards() {
+interface LoaderProps {
+  title: string;
+}
+
+export default function Loader({ title }: LoaderProps) {
   return (
     <div className="flex flex-col items-center justify-center h-40 gap-3 text-center">
       <Loader2
@@ -8,7 +12,7 @@ export default function LoadingAnalyticsCards() {
         aria-hidden="true"
       />
       <span className="text-sm font-medium text-muted-foreground">
-        Loading analytics data...
+        {title}...
       </span>
     </div>
   );
