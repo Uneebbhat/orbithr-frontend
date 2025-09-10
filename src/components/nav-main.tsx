@@ -8,6 +8,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { CirclePlus, LucideProps } from "lucide-react";
+import Link from "next/link";
 
 type IconType = React.ForwardRefExoticComponent<
   Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
@@ -30,9 +31,12 @@ export function NavMain({
             <SidebarMenuButton
               tooltip="Add Employee"
               className="bg-primary text-white hover:bg-primary/90 hover:text-white active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear cursor-pointer"
+              asChild
             >
-              <CirclePlus />
-              <span>Add Employee</span>
+              <Link href="/employees/add">
+                <CirclePlus />
+                <span>Add Employee</span>
+              </Link>
             </SidebarMenuButton>
             {/* <Button
               size="icon"
