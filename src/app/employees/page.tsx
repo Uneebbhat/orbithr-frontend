@@ -1,10 +1,10 @@
+import Loader from "@/modules/employees/components/loader";
+import EmployeeDataTable from "@/modules/employees/components/employee-data-table";
 import EmployeesAnalyticsCards from "@/modules/employees/components/employees-analytics-cards";
 import DepartmentDistributionChart from "@/modules/employees/components/department-distribution-chart";
 
 import { Metadata } from "next";
-import EmployeeDataTable from "@/modules/employees/components/employee-data-table";
 import { Suspense } from "react";
-import Loader from "@/modules/employees/components/loader";
 
 export const metadata: Metadata = {
   title: "OrbitHR | Employees",
